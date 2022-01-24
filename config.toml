@@ -1,4 +1,4 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://kumar-muthu.github.io/max-pvc//'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Max PVC'
 theme = 'basic'
