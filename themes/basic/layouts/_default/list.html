@@ -1,10 +1,28 @@
 {{ define "main" }}
-
-<h2>{{ .Title }}</h2>
-<ul>
-    {{ range .Pages }}
-    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-    {{ end }}
-</ul>
+<section class="section" id="blog">
+    <div class="container">
+        <h2>{{ .Title }}</h2>
+        <div class="row">
+            {{ range .Pages }}
+            <div class="col-lg-4 col-md-6">
+                <div class="blog-box">
+                    <div class="blog-img-box">
+                        <img src="https://images.unsplash.com/photo-1621508590548-c64f8e85f3e9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2274&q=80" alt="" class="img-fluid blog-img">
+                    </div>
+                    <div class="single-blog">
+                        <div class="blog-content">
+                            <a href="{{ .RelPermalink }}">
+                                <h3 class="card-title">{{ .Title }}</h3>
+                            </a>
+                            <p>{{ .Summary }}</p>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
 
 {{ end }}
