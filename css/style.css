@@ -1956,4 +1956,9 @@ CONTACT PAGE
   }
 }
 
+
+.img-thumbnail {
+  width: 400px;
+  height: 400px;
+}
 /*# sourceMappingURL=maps/style.css.map */
