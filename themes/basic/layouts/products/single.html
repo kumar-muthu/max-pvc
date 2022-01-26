@@ -1,6 +1,6 @@
 {{define "main"}}
 
-<section class="section" id="process">
+<section class="section pb-0 pt-6" id="process">
     <div class="container">
         <h2>{{ .Title }}</h2>
         <div class="row">
@@ -9,24 +9,27 @@
             </div>
         </div>
     </div>
-
-
 </section>
 
-<section id="work" class="section-bottom">
+
+<section id="examples" class="section p-1">
     <div class="container">
-        {{ range .Params.imageSections }}
-        <h2>{{ .title }}</h2>
+        <h2><i class="fa fa-camera-retro heading-icon" aria-hidden="true"></i> Images</h2>
         <div class="row">
-            {{ range .images }}
-            <div class="col-lg-4 col-md-6 p-0">
-                <div class="work-block">
-                    <img src="{{.}}" alt="work-img" class="img-fluid">
+            {{ range .Params.images }}
+            <div class="col-md-4">
+                <div class="box show" style="transition-delay: 0s;">
+                    <div class="inner">
+                        <a href="{{delimit (slice "images/products/large/" .src ) ""
+                        | relURL }}" class="glightbox">
+                        <img src="{{delimit (slice "images/products/small/" .src ) ""
+                        | relURL }}" alt="image" class="img-thumbnail">
+                        </a>
+                    </div>
                 </div>
             </div>
             {{end}}
         </div>
-        {{end}}
     </div>
 </section>
 
